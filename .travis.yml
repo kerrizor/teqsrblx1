@@ -21,7 +21,7 @@ before_install:
   - sudo cp chromedriver /usr/local/bin/.
   - sudo chmod +x /usr/local/bin/chromedriver
   - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb star
+  - sh -e /etc/init.d/xvfb start
   - sleep 3
   - bundle install
   - bundle exec chromedriver-update 2.28
