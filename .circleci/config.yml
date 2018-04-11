@@ -22,6 +22,11 @@ defaults: &defaults
         paths:
           - ./vendor/bundle
         key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+        
+    - run:
+      name: dsa
+      command: |
+        bundle exec chromedriver-update 2.28
 
     # run tests!
     - run:
